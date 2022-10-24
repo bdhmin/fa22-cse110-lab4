@@ -10,7 +10,7 @@
 8. the function will return the list `[50, 100, 150]` because from the for loop in line 6, we calculate the three operations from question 3. They each equate to `50`, `100`, `150`. These numbers are pushed to the array `discounted` and this variable is then returned. Even with the `let`, the values are saved to `discounted` list while each iteration is calculated individually.
 9. The function returns an Error: the vairable `i` is outside of the scope of the for loop where i is defined by a let on line 5. Same as question 5, i is only inside of the scope of the for loop.
 10. The console will log **3**, which is the length of the prices array. We know that this is the length because the function in line 17 inputs an array of length 3.
-11. The function returns the array `[50, 100, 150]`. The code multiplies each price input with 1 - discount which is 0.5. So the output array is just the input array where each value is divided by 2.
+11. The function returns the array `[50, 100, 150]`. The code multiplies each price input with 1 - discount which is 0.5. So the output array is just the input array where each value is divided by 2. Even though the array `discounted` is an array, the array can be pushed items.
 12. Notation
   A. `student.name`
   B. `student['Grad Year']`
@@ -30,9 +30,9 @@
   A. `'2' > 1 === true`. `>` operator with 1 on the right side will make `'2'` map to a number. Then comaprison continues.
   B. `'2' < '12' === false`. Now that the two sides are both strings, the values will be compared lexicographically. Since the '1' of '12' comes before '2', '12' is less than '2'.
   C. `2 == '2' === true`. the `==` checks the value of the two sides automatically mapping whichever side's type to match in order to compare. since `'2'` can map to the number `2`, the comparison is true.
-  D. `2 === '2' === false`. The `===` checks the type as well as the value. Since the left side is a number and right side is a string, the types do not match so it is false.
+  D. `(2 === '2') === false`. The `===` checks the type as well as the value. Since the left side is a number and right side is a string, the types do not match so it is false.
   E. `true == 2 === false`. When compared, `true` is mapped to a number, 1. Since 1 does not equal 2, the comparison is false.
-  F. `true === Boolean(2) == true`. Any number that is not 0 is considered "truthy", so if 2 is converted to a boolean, it is converted to true. So it is true.
+  F. `(true === Boolean(2)) === true`. Any number that is not 0 is considered "truthy", so if 2 is converted to a boolean, it is converted to true. So it is true.
 15. The `==` is an operator that checks if two values are equal. This allows different types to be compared with the chance of them still being equal. The `===` operator checks the type of the two values, then checks the values if the types are the same.
 16. Console logs `21, 45, 5, 2`
 17. When `modifyArray([1,2,3], doSomething)` is called, the loop in line 3 will push the callback function with each element in the argument array `[1,2,3]`. The array with the callback functions is now returned in line 6. The callback functions that are pushed would be `[doSomething(1), doSomething(2), doSomething(3)]`. But returning this array won't actually call the callback functions yet.
